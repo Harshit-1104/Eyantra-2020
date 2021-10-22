@@ -17,10 +17,10 @@
 *****************************************************************************************
 '''
 
-# Team ID:			[ Team-ID ]
-# Author List:		[ Names of team members worked on this file separated by Comma: Name1, Name2, ... ]
+# Team ID:			[763]
+# Author List:		[ Akansha Gupta, Harshit Gupta, Suyash Kumar Sirvastav, Vatsal Ojha ]
 # Filename:			task_1b.py
-# Functions:		applyPerspectiveTransform, detectMaze, writeToCsv
+# Functions:		applyPerspectiveTransform, detectMaze, writeToCsv, orderpoints, four_point_transform, fun
 # 					[ Comma separated list of functions in this file ]
 # Global variables:	
 # 					[ List of global variables defined in this file ]
