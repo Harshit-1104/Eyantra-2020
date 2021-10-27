@@ -127,12 +127,8 @@ def find_path(maze_array, start_coord, end_coord):
             if bin[3] == 0:
                 graph[toIndex(i, j)].append(toIndex(i+1, j))
 
-    #print(graph)
-
     source = toIndex(start_coord[0], start_coord[1])
-    #print(source)
     target = toIndex(end_coord[0], end_coord[1])
-    #print(target)
     cost, visited, par, toVisit = [], [], [], []
     cnt = 0
 
@@ -163,23 +159,20 @@ def find_path(maze_array, start_coord, end_coord):
 
                 toVisit.append(node)
 
-        #print(toVisit)
         del toVisit[0]
 
     shortestPath = []
     if par[target] != -1 :
-     while par[target] != -1:
+        while par[target] != -1:
+            shortestPath.append(toCoord(target))
+            target = par[target]
+
         shortestPath.append(toCoord(target))
-        target = par[target]
-     shortestPath.append(toCoord(target))
-     shortestPath.reverse()
-    else :
+        shortestPath.reverse()
+    else:
         shortestPath = None
 
-    #print(shortestPath)
     path = shortestPath
-
-    ######################################################
 
     return path
 
@@ -277,7 +270,7 @@ if __name__ == "__main__":
 
             path = find_path(maze_array, start_coord, end_coord)
 
-            if (type(path) is list):
+            if type(path) is list:
 
                 print('\nPath calculated between %s and %s is %s' % (start_coord, end_coord, path))
                 print('\n============================================')
